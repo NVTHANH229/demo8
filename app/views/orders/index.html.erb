@@ -1,0 +1,43 @@
+
+
+
+<div class="container mx-auto px-4">
+  <div class="flex items-center justify-between flex-wrap mb-6">
+    <h1 class="text-3xl font-bold text-blue-500">Orders</h1>
+
+    <%= link_to new_order_path, class: button_class(theme: "primary") do %>
+    Add New Order
+    <% end %>
+  </div>
+
+   <table class="table-auto border-collapse border-grey w-full">
+  <thead class="bg-gray-200 dark:bg-gray-500">
+      <tr>
+        
+                  <th class="border-2 border-gray-500 dark:border-gray-700 font-semibold p-4 text-blue-500">Customer</th>
+                  <th class="border-2 border-gray-500 dark:border-gray-700 font-semibold p-4 text-blue-500">Order date</th>
+                  <th class="border-2 border-gray-500 dark:border-gray-700 font-semibold p-4 text-blue-500">Total amount</th>
+                
+          <th class="border-2 border-gray-500 dark:border-gray-700 font-semibold p-4 text-blue-500"></th>
+        
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @orders.each do |order| %>
+      <%= content_tag :tr, id: dom_id(order), class: dom_class(order) do %>
+      
+
+              <td class="border-2 border-gray-500 dark:border-gray-700 p-4 text-black dark:text-black"><%= order.customer.name %></td>
+              <td class="border-2 border-gray-500 dark:border-gray-700 p-4 text-black dark:text-black"><%= order.order_date %></td>
+              <td class="border-2 border-gray-500 dark:border-gray-700 p-4 text-black dark:text-black"><%= order.total_amount %></td>
+      
+      
+        <td class="border-2 border-gray-500 dark:border-gray-700 p-4 text-black dark:text-black"><%= link_to 'Show', order %></td>
+      
+      <% end %>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+</div>
