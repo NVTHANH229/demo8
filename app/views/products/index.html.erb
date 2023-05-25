@@ -11,18 +11,18 @@
   </div>
 
    <table class="table-auto border-collapse border-black w-full">
-  <thead class="bg-blue-800">
+  <thead class="bg-yellow-400">
       <tr>
         
           
-                  <th class="border-2 border-black dark:border-black font-semibold p-4 text-white text-left">Name</th>
-                  <th class="border-2 border-black dark:border-black font-semibold p-4 text-white text-left">Category</th>
-                  <th class="border-2 border-black dark:border-black font-semibold p-4 text-white text-left">Brand</th>
-                  <th class="border-2 border-black dark:border-black font-semibold p-4 text-white text-left">Short description</th>
-                  <th class="border-2 border-black dark:border-black font-semibold p-4 text-white text-left">Size</th>
-                  <th class="border-2 border-black dark:border-black font-semibold p-4 text-white text-left">Price</th>
-                  <th class="border-2 border-black dark:border-black font-semibold p-4 text-white text-left">Quantity</th>
-                  <th class="border-2 border-black dark:border-black font-semibold p-4 text-white text-left "></th>
+                  <th class="border-2 border-black dark:border-black font-semibold p-4 text-emerald-400 text-left">Name</th>
+                  <th class="border-2 border-black dark:border-black font-semibold p-4 text-emerald-400 text-left">Category</th>
+                  <th class="border-2 border-black dark:border-black font-semibold p-4 text-emerald-400 text-left">Brand</th>
+                  <th class="border-2 border-black dark:border-black font-semibold p-4 text-emerald-400 text-left">Short description</th>
+                  <th class="border-2 border-black dark:border-black font-semibold p-4 text-emerald-400 text-left">Size</th>
+                  <th class="border-2 border-black dark:border-black font-semibold p-4 text-emerald-400 text-left">Price</th>
+                  <th class="border-2 border-black dark:border-black font-semibold p-4 text-emerald-400 text-left">Quantity</th>
+                  <th class="border-2 border-black dark:border-black font-semibold p-4 text-emerald-400 text-left "></th>
                 
       </tr>
     </thead>
@@ -31,16 +31,16 @@
       <% @products.each do |product| %>
       <%= content_tag :tr, id: dom_id(product), class: dom_class(product) do %>
       
-        <td class="border-2 border-gray-500 dark:border-gray-700 p-4 text-black dark:text-black"><%= link_to product.product_name, product %></td>
+        <td class="border-2 border-black dark:border-black p-4 text-black dark:text-black"><%= link_to product.product_name, product %></td>
       
 
-              <td class="border-2 border-black dark:border-black font-semibold p-4 text-white text-left"><%= product.category.name %></td>
-              <td class="border-2 border-black dark:border-black font-semibold p-4 text-white text-left"><%= product.brand.brand_name %></td>
-              <td class="border-2 border-black dark:border-black font-semibold p-4 text-white text-left"><%= product.short_description %></td>
-              <td class="border-2 border-black dark:border-black font-semibold p-4 text-white text-left"><%= product.size %></td>
-              <td class="border-2 border-black dark:border-black font-semibold p-4 text-white text-left"><%= product.price %></td>
-              <td class="border-2 border-black dark:border-black font-semibold p-4 text-white text-left"><%= product.quantity %></td>
-       <td class="border-2 border-black dark:border-black font-semibold p-4 text-white text-left"><%= link_to 'Show', product %></td>
+              <td class="border-2 border-black dark:border-black p-4 text-black text-left"><%= product.category.name %></td>
+              <td class="border-2 border-black dark:border-black p-4 text-black text-left"><%= product.brand.brand_name %></td>
+              <td class="border-2 border-black dark:border-black p-4 text-black text-left"><%= product.short_description %></td>
+              <td class="border-2 border-black dark:border-black p-4 text-black text-left"><%= product.size %></td>
+              <td class="border-2 border-black dark:border-black p-4 text-black text-left"><%= product.price %></td>
+              <td class="border-2 border-black dark:border-black p-4 text-black text-left"><%= product.quantity %></td>
+       <td class="border-2 border-black dark:border-black p-4 text-black text-left"><%= link_to 'Show', product %></td>
       
       <% end %>
       <% end %>
